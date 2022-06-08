@@ -1,1 +1,1 @@
-org.example.detekt.MyRuleSetProvider
+com.github.elect86.dslmandatory.MyRuleSetProvider
