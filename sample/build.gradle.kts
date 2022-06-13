@@ -18,7 +18,7 @@ dependencies {
     testImplementation("io.kotest:kotest-assertions-core:5.3.0")
     testImplementation("org.junit.jupiter:junit-jupiter:5.8.2")
 
-    detekt(project(":rule"))
+    detektPlugins(project(":rule"))
 }
 
 tasks {

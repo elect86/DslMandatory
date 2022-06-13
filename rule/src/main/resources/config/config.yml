@@ -1,0 +1,3 @@
+MyRuleSet:
+  DslMandatoryRule:
+    active: true
