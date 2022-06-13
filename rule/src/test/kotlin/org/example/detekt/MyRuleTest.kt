@@ -89,10 +89,8 @@ internal class DslMandatoryRuleTest(private val env: KotlinCoreEnvironment) {
         val findings = DslMandatoryRule(Config.empty).compileAndLintWithContext(env, code)
         assertThat(findings).hasSize(1)
         assertThat(findings).hasSourceLocation(15, 5)
-        assertEquals(
-            "You declaration of 'person' is missing 2 mandatory identifiers: 'name, age'",
-            findings.first().message
-        )
+        assertEquals("You declaration of 'person' is missing 2 mandatory identifiers: 'name, age'",
+                     findings.first().message)
     }
 
     @Test
@@ -121,9 +119,7 @@ internal class DslMandatoryRuleTest(private val env: KotlinCoreEnvironment) {
         """.trimIndent()
         val findings = DslMandatoryRule(Config.empty).compileAndLintWithContext(env, code)
         assertThat(findings).hasSize(2)
-        assertThat(findings).hasSourceLocations(
-            SourceLocation(14, 5),
-            SourceLocation(17, 5)
-        )
+        assertThat(findings).hasSourceLocations(SourceLocation(14, 5),
+                                                SourceLocation(17, 5))
     }
 }
