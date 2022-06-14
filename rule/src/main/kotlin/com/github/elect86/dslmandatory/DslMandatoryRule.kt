@@ -58,18 +58,13 @@ class DslMandatoryRule(config: Config) : Rule(config) {
 
                 // Then we check that all the mandatory identifiers have been assigned in a binary expression.
                 val missingIdentifiers = mandatoryIdentifiers.filter { it !in seenAssignedNames }
-                if (missingIdentifiers.isNotEmpty()) {
-                    // If one or more haven't been assigned, we raise an issue.
-                    report(
-                        CodeSmell(
-                            issue,
-                            Entity.from(expression),
-                            "You declaration of '${resultingDescriptor.name}' is missing ${missingIdentifiers.size} mandatory identifiers: '${
-                                missingIdentifiers.joinToString(", ")
-                            }'"
-                                 )
+                if (missingIdentifiers.isNotEmpty())
+                // If one or more haven't been assigned, we raise an issue.
+                    report(CodeSmell(issue,
+                                     Entity.from(expression),
+                                     "You declaration of '${resultingDescriptor.name}' is missing ${missingIdentifiers.size} " +
+                                             "mandatory identifiers: '${missingIdentifiers.joinToString(", ")}'")
                           )
-                }
             }
     }
 
