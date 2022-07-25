@@ -13,7 +13,7 @@ dependencies {
 
     testImplementation("org.assertj:assertj-core:3.23.1")
     testImplementation("io.gitlab.arturbosch.detekt:detekt-test:1.20.0")
-    testImplementation("io.kotest:kotest-assertions-core:5.3.0")
+    testImplementation("io.kotest:kotest-assertions-core:5.4.0")
     testImplementation("org.junit.jupiter:junit-jupiter:5.8.2")
 }
 
