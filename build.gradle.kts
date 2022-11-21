@@ -3,7 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     kotlin("jvm") version embeddedKotlinVersion
-    id("io.gitlab.arturbosch.detekt") version "1.21.0-RC1"
+    id("io.gitlab.arturbosch.detekt") version "1.22.0"
 }
 
 group = "org.example.detekt"
