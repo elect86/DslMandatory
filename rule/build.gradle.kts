@@ -9,7 +9,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly("io.gitlab.arturbosch.detekt:detekt-api:1.20.0")
+    compileOnly("io.gitlab.arturbosch.detekt:detekt-api:1.22.0")
 
     testImplementation("org.assertj:assertj-core:3.23.1")
     testImplementation("io.gitlab.arturbosch.detekt:detekt-test:1.20.0")
